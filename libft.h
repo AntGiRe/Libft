@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agil-rey <agil-rey@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 12:53:50 by agil-rey          #+#    #+#             */
-/*   Updated: 2022/09/27 13:31:43 by agil-rey         ###   ########.fr       */
+/*   Updated: 2022/09/28 13:27:01 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 int     ft_isalpha(int c);
 int     ft_isalnum(int c);
-void *ft_memset(void *str, int c, size_t n);
-void	ft_bzero(void *s, size_t n);
+void    *ft_memset(void *str, int c, size_t n);
+void    ft_bzero(void *s, size_t n);
+void *ft_calloc(size_t nmemb, size_t size);
 int     ft_isascii(int arg);
 int     ft_isdigit(int arg);
 int     ft_isprint(int arg);
@@ -25,5 +26,5 @@ char    *ft_strchr(char *s, int c);
 unsigned long	ft_strlcpy(char *dst, char *src, size_t size);
 int     ft_strlen(char arg[]);
 char	*ft_strrchr(char *str, int c);
-int ft_tolower(int c);
-int ft_toupper(int c);
+int     ft_tolower(int c);
+int     ft_toupper(int c);
