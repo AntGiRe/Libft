@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agil-rey <agil-rey@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 17:50:23 by agil-rey          #+#    #+#             */
-/*   Updated: 2022/09/19 17:50:23 by agil-rey         ###   ########.fr       */
+/*   Updated: 2022/10/02 20:14:36 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_isascii(int arg)
+int     ft_isascii(int c)
 {
-    if (arg < 128 && arg >= 0)
+    if (c < 128 && c >= 0)
     {
         return (1);
     }

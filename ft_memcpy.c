@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agil-rey <agil-rey@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 12:17:08 by agil-rey          #+#    #+#             */
-/*   Updated: 2022/09/27 13:29:42 by agil-rey         ###   ########.fr       */
+/*   Updated: 2022/10/02 20:16:57 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *str1, void *str2, size_t n)
+void	*ft_memcpy(void *str1, const void *str2, size_t n)
 {
 	char* dest;
 	char* src;
