@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: agil-rey <agil-rey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 17:47:37 by marvin            #+#    #+#             */
-/*   Updated: 2022/10/02 20:20:16 by marvin           ###   ########.fr       */
+/*   Updated: 2022/10/05 13:56:46 by agil-rey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,23 @@
 
 size_t    ft_strlcat(char *dst, const char *src, size_t size)
 {
-    int i;
-    int j;
+    size_t len_dst;
+    size_t j;
+    size_t len_src;
 
-    i = ft_strlen(dst);
-    j = 0;
-    if (size == 0)
-        return (ft_strlen(src));
-    while(src[j] != '\0' && i + 1 < size)
-    {
-        dst[i] = src[j];
-        j++;
-        i++;
-    }
-    dst[i] = '\0';
-    if (size < ft_strlen(dst))
+    len_dst = ft_strlen(dst);
+    len_src = ft_strlen(src);
+    if (size <= len_dst)
         return (ft_strlen(src) + size);
     else
-        return (ft_strlen(dst) + ft_strlen(src));
+    {
+        j = 0;
+        while(src[j] != '\0' && j < size - len_dst - 1)
+        {
+            dst[len_dst + j] = src[j];
+            j++;
+        }
+    }
+    dst[len_dst + j] = '\0';
+    return (len_dst + len_src);
 }

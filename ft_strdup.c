@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: agil-rey <agil-rey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 17:33:36 by marvin            #+#    #+#             */
-/*   Updated: 2022/10/01 17:40:38 by marvin           ###   ########.fr       */
+/*   Updated: 2022/10/05 12:04:24 by agil-rey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strdup(char *s)
+char    *ft_strdup(const char *s)
 {
     int i;
     char *dest = (char*) malloc(sizeof(char) * (ft_strlen(s) + 1));

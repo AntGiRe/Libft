@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: agil-rey <agil-rey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 14:28:50 by marvin            #+#    #+#             */
-/*   Updated: 2022/10/02 20:20:44 by marvin           ###   ########.fr       */
+/*   Updated: 2022/10/05 12:16:50 by agil-rey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ char    *ft_strchr(const char *s, int c)
     while (*s != '\0')
     {
         if(*s == c)
-            return (s);
+            return ((char *)s);
         s++;
     }
     return (0);
