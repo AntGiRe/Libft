@@ -12,20 +12,21 @@
 
 #include "libft.h"
 
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-    size_t i;
-    size_t len_find;
+	size_t	i;
+	size_t	len_find;
 
-    len_find = ft_strlen((char *)little);
-    i = 0;
-    if (*little == '\0')
+	len_find = ft_strlen((char *)little);
+	i = 0;
+	if (*little == '\0')
 		return ((char *)big);
-    while (big[i] != '\0' && len-- >= len_find)
-    {
-        if (big[i] == *little && ft_memcmp((char *)&big[i], little, len_find) == 0)
-            return ((char *)&big[i]);
-        i++;
-    }
-    return (NULL);
+	while (big[i] != '\0' && len-- >= len_find)
+	{
+		if (big[i] == *little
+			&& ft_memcmp((char *)&big[i], little, len_find) == 0)
+			return ((char *)&big[i]);
+		i++;
+	}
+	return (NULL);
 }

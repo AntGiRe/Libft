@@ -14,10 +14,10 @@
 
 void	*ft_memcpy(void *str1, const void *str2, size_t n)
 {
-	char* dest;
-	char* src;
+	char	*dest;
+	char	*src;
 
-	if(!n || str1 == str2)
+	if (!n || str1 == str2)
 		return (str1);
 	dest = (char *)str1;
 	src = (char *)str2;

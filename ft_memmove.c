@@ -14,31 +14,24 @@
 
 void	*ft_memmove(void *str1, const void *str2, size_t n)
 {
-	char* dest;
-	char* src;
+	char	*dest;
+	char	*src;
 
-	if(!n || str1 == str2)
+	if (!n || str1 == str2)
 		return (str1);
-
 	if (str1 > str2)
 	{
 		dest = (char *)str1 + n - 1;
 		src = (char *)str2 + n - 1;
-		while (n > 0)
-		{
+		while (n-- > 0)
 			*dest-- = *src--;
-			n--;
-		}
 	}
 	else
 	{
 		dest = str1;
 		src = (char *)str2;
-		while (n > 0)
-		{
+		while (n-- > 0)
 			*dest++ = *src++;
-			n--;
-		}
 	}
 	return (str1);
 }

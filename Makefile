@@ -22,11 +22,11 @@ CC = gcc -c
 
 FLAGS = -Wall -Werror -Wextra
 
-OBJS = ${SRCS:.c=.o}
+OBJS = ${SRCS:%.c=%.o}
 
 ${NAME}: ${OBJS}
 		$(CC) $(FLAGS) -c $(SRCS)
-		ar rcs ${NAME} ${OBJS}
+		ar rc ${NAME} ${OBJS}
 
 all: ${NAME}
 
