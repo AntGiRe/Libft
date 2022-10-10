@@ -6,7 +6,7 @@
 /*   By: agil-rey <agil-rey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 12:36:32 by agil-rey          #+#    #+#             */
-/*   Updated: 2022/10/05 12:10:34 by agil-rey         ###   ########.fr       */
+/*   Updated: 2022/10/10 10:27:19 by agil-rey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 	char* dest;
 	char* src;
 
-	if(!str2)
-		return (0);
+	if(!n || str1 == str2)
+		return (str1);
 
 	if (str1 > str2)
 	{

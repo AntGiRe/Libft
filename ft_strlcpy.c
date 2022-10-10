@@ -6,7 +6,7 @@
 /*   By: agil-rey <agil-rey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 13:36:37 by agil-rey          #+#    #+#             */
-/*   Updated: 2022/10/05 14:02:21 by agil-rey         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:13:18 by agil-rey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	if (size > 1)
+	size_t	i;
+
+	i = 0;
+	while (size > i + 1 && src[i])
 	{
-		while (size > 0 && *dst != '\0')
-		{
-			*dst++ = *src++;
-			size--;
-		}
-		*dst = '\0';
+		dst[i] = src[i];
+		i++;
 	}
+	if (size)
+		dst[i] = '\0';
 	return (ft_strlen(src));
 }

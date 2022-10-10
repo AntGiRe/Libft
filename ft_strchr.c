@@ -6,7 +6,7 @@
 /*   By: agil-rey <agil-rey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 14:28:50 by marvin            #+#    #+#             */
-/*   Updated: 2022/10/05 12:16:50 by agil-rey         ###   ########.fr       */
+/*   Updated: 2022/10/10 10:57:09 by agil-rey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@ char    *ft_strchr(const char *s, int c)
 {
     while (*s != '\0')
     {
-        if(*s == c)
+        if(*s == (char)c)
             return ((char *)s);
         s++;
     }
+    if ((char)c == '\0')
+        return((char *)s);
     return (0);
 }

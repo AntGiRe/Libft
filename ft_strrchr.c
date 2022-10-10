@@ -6,7 +6,7 @@
 /*   By: agil-rey <agil-rey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 11:32:40 by agil-rey          #+#    #+#             */
-/*   Updated: 2022/10/05 12:17:09 by agil-rey         ###   ########.fr       */
+/*   Updated: 2022/10/10 15:03:49 by agil-rey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,13 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	char* index = 0;
-	char* st;
+	int i;
 
-	st = (char *)str;
-	while (*st != '\0')
+	i = ft_strlen((char *)str) + 1;
+	while (i--)
 	{
-		if (*st == c)
-		{
-			index = st;
-		}
-		st++;
+		if (*(str + i) == c)
+			return ((char *)(str + i));
 	}
-	return (index);
+	return (0);
 }

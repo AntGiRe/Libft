@@ -6,7 +6,7 @@
 /*   By: agil-rey <agil-rey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 14:25:37 by marvin            #+#    #+#             */
-/*   Updated: 2022/10/05 12:26:03 by agil-rey         ###   ########.fr       */
+/*   Updated: 2022/10/10 14:46:30 by agil-rey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 char *ft_strnstr(const char *big, const char *little, size_t len)
 {
-    int i;
-    int j;
+    size_t i;
+    size_t len_find;
 
+    len_find = ft_strlen((char *)little);
     i = 0;
-    while (big[i] != '\0' && (unsigned long)i < len)
+    if (*little == '\0')
+		return ((char *)big);
+    while (big[i] != '\0' && len-- >= len_find)
     {
-        j = 0;
-        while (big[i + j] == little[j] || little[j] == '\0')
-        {
-            if(little[j] == '\0')
-                return ((char *)&big[i]);
-            j++;
-        }
+        if (big[i] == *little && ft_memcmp((char *)&big[i], little, len_find) == 0)
+            return ((char *)&big[i]);
         i++;
     }
-    return ((char *)big);
+    return (NULL);
 }
